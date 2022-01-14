@@ -27,7 +27,6 @@ bool CheckIfNumIsCorrect(char* str) {
         if (str[i] == 'V' && str[i + 1] == 'L') return 0;
         if (str[i] == 'L' && str[i + 1] == 'C') return 0;
         if (str[i] == 'C' && str[i + 1] == 'D') return 0;
-        if (str[i] == 'C' && str[i + 1] == 'M') return 0;
         if (str[i] == 'D' && str[i + 1] == 'M') return 0;
         if (str[i] == 'V' && str[i + 1] == 'V') return 0;
     }
@@ -79,7 +78,7 @@ int main() {
     std::cin >> size;
     std::cin.ignore(1, '\n');
     char* str = new char[size+1];
-    std::cout << "Input your string: "; // I V X L-50 C-100 D-500 M-1000
+    std::cout << "Input your string: ";
     std::cin.getline(str, size+1);
     if (CheckIfNumIsCorrect(str) && CheckInput(str)) {
         Convert(str, size);
